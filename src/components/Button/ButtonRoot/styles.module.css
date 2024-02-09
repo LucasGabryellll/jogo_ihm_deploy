@@ -1,0 +1,41 @@
+.content-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(240, 248, 255, 0.9);
+
+  color: #004E60;
+  font-size: 40px;
+
+  width: 100%;
+  height: 100%;
+  
+  border: .5px solid #004E60;
+
+  border-radius: 10px;
+  box-shadow: -4px 4px 4px 4px rgba(0, 0, 0, 0.2);
+
+  transform: rotate(2deg);
+
+  transition: 120ms ease-in-out;
+}
+
+.content-button:hover {
+  cursor: pointer;
+  background-color: #ffeded;
+
+  color:#00ebe6;
+
+  transform: rotate(0);
+
+  border-color: rgb(0, 235, 230);
+  max-height: 110px;
+  scale: 102%;
+
+  box-shadow: -4px 4px 4px 4px rgba(0, 255, 245, 0.5);
+}
+
+.description-button {
+  width: 70%;
+}
