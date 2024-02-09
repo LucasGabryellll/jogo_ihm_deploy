@@ -15,7 +15,7 @@ export function AppRoutes() {
       />
 
       <Routes>
-        <Route path='/' element={<Login />} />
+        <Route path='/jogo_ihm_deploy' element={<Login />} />
 
         <Route path='/home' element={<Home/>} />
 
