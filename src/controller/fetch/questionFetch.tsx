@@ -121,6 +121,11 @@ export function QuestionFetch() {
     pointController.alterCountChallengeIncorrect();
     pointController.alterCountPoints({ type: "sub", point: question!.points });
 
+    setConfirmResponse({
+      isSendReponse: true,
+      isCorrect: false
+    });
+    
     clearChallenge();
 
     socket.emit("response_challenge", room);
@@ -148,7 +153,7 @@ export function QuestionFetch() {
 
       setTimeout(() => {
         socket.emit("response_challenge", room);
-      }, 4000)
+      }, 2800)
 
     } else {
       pointController.alterCountChallengeIncorrect();
@@ -161,7 +166,7 @@ export function QuestionFetch() {
 
       setTimeout(() => {
         socket.emit("response_challenge", room);
-      }, 4000)
+      }, 2800)
 
     }
 
@@ -169,6 +174,7 @@ export function QuestionFetch() {
 
   useEffect(() => {
     socket.on('open_challenge', (data: ChallengeResponse) => {
+
       setQuestion(data.question);
       setWords(data.challengeWords);
       setWordsOrganized([]);
